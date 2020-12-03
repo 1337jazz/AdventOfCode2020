@@ -10,7 +10,7 @@ namespace Solutions.Day2
         {
             var data = File.ReadAllLines("Day2/puzzle_input.txt");
             System.Console.WriteLine($"Day 2, part 1: {Part1(data)}");
-            System.Console.WriteLine($"Day 2, part 2: {Part2(data)}");
+            System.Console.WriteLine($"Day 2, part 2: {Part2(data)}\n");
         }
 
         #region Part 1 Description
