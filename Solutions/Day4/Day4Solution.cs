@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Solutions.Day4.Library;
+using System;
 using System.IO;
 
 namespace Solutions.Day4
 {
     public class Day4Solution
     {
-        private static void Run()
+        public static void Run()
         {
             var data = File.ReadAllLines("Day4/puzzle_input.txt");
             Console.WriteLine($"Day 4, part 1: {Part1(data)}");
@@ -14,12 +15,25 @@ namespace Solutions.Day4
 
         private static int Part1(string[] data)
         {
-            return 0;
+            var passports = Passport.PassportifyList(data);
+            var validCount = 0;
+
+            foreach (var passport in passports)
+                if (passport.IsValidPart1)
+                    validCount++;
+
+            return validCount;
         }
 
         private static int Part2(string[] data)
         {
-            return 0;
+            var passports = Passport.PassportifyList(data);
+            var validCount = 0;
+
+            foreach (var item in passports)
+                if (item.IsValidPart2) validCount++;
+
+            return validCount;
         }
     }
 }
